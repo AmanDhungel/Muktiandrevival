@@ -519,11 +519,11 @@ export default function WaitlistMasterPage() {
                 t
               </div>
               <span className="text-sm font-black tracking-tighter text-white">
-                ticketleo
+                WhatsHappeningAustralia
               </span>
             </div>
             <p className="text-[10px] font-medium tracking-widest text-zinc-600 uppercase">
-              © 2026 Ticketleo. All rights reserved.
+              © 2026 WhatsHappeningAustralia. All rights reserved.
             </p>
           </div>
         </section>
