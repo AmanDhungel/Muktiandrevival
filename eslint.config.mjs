@@ -13,6 +13,14 @@ const eslintConfig = defineConfig([
     "build/**",
     "next-env.d.ts",
   ]),
+  {
+    rules: {
+      // "off"   -> Allows the use of 'any' without warnings
+      // "warn"  -> Warns when 'any' is used
+      // "error" -> Throws an error when 'any' is used
+      "@typescript-eslint/no-explicit-any": "off",
+    },
+  },
 ]);
 
 export default eslintConfig;
