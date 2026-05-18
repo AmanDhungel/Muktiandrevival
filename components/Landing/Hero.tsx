@@ -325,11 +325,11 @@ export default function WaitlistMasterPage() {
                 </h1>
               </div>
               <p className="max-w-xl text-sm sm:text-base leading-relaxed text-zinc-300 font-medium">
-                It&#8216;s been years since Australia heard Mukti & Revivals
-                live. He&#8216;s returning with fan favourites, Kathmandu
-                stories, and surprise moments just for this community. From
-                Sydney to Perth, every city brings a different energy. Pick your
-                city—and feel the lyrics live again.
+                It&#8216;s been long since Australia heard Mukti & Revivals
+                live. They are returning with fan favourites, Kathmandu stories,
+                and surprise moments just for this community. From Sydney to
+                Perth, every city brings a different energy. Pick your city and
+                feel the lyrics live again.
               </p>
               <div className="pt-2 flex flex-col sm:flex-row lg:flex-col items-center lg:items-start gap-8 w-full justify-center sm:justify-start">
                 <button className="group flex items-center gap-3 rounded-full bg-red-700 hover:bg-red-600 px-8 py-4 text-sm font-black uppercase tracking-widest text-white transition-all duration-300 shadow-[0_0_30px_rgba(185,28,28,0.3)] hover:shadow-[0_0_40px_rgba(185,28,28,0.5)] transform hover:-translate-y-0.5">
