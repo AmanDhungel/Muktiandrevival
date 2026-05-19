@@ -322,13 +322,11 @@ export default function RedesignedTourPage() {
             <div className="w-full rounded-xl overflow-hidden shadow-lg mt-6">
               <iframe
                 data-testid="embed-iframe"
-                src="https://open.spotify.com/embed/artist/4X9z6R503gZ1A5Sbe87hF0"
+                src="https://open.spotify.com/embed/artist/62yM3pzTzQHys1Ih7e9dJT?utm_source=generator"
                 width="100%"
                 height="352"
-                className="border-0 rounded-xl"
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                loading="lazy"
-              />
+                loading="lazy"></iframe>
             </div>
           </div>
         </section>
