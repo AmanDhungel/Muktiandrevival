@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import { Volume2, VolumeX, Calendar } from "lucide-react";
+import { Volume2, VolumeX, Calendar, Disc } from "lucide-react";
 import Image from "next/image";
 
 interface TourCity {
@@ -18,8 +18,7 @@ const TOUR_CITIES_DATA: TourCity[] = [
     id: "darwin",
     state_code: "NT",
     city_name: "Darwin",
-    description:
-      "Opening night lands in the harbour city with curated vibes and the biggest Nepalese community in Australia ready to sing along.",
+    description: "Opening night lands in the harbour city with curated vibes.",
     date_status: "Coming Soon",
     date_label: "night premiere",
   },
@@ -27,18 +26,16 @@ const TOUR_CITIES_DATA: TourCity[] = [
     id: "sydney",
     state_code: "NSW",
     city_name: "Sydney",
-    description:
-      "Opening night lands in the harbour city with curated vibes and the biggest Nepalese community in Australia ready to sing along.",
+    description: "Opening night lands in the harbour city with curated vibes.",
     date_status: "Coming Soon",
     date_label: "Opening night premiere",
   },
-
   {
     id: "hobart",
     state_code: "TAS",
     city_name: "Hobart",
     description:
-      "Hobart brings a spectacular experience with a vibrant, welcoming, and passionate community atmosphere.",
+      "Hobart brings a spectacular experience with a welcoming community.",
     date_status: "Coming Soon",
     date_label: "Subtropical night experience",
   },
@@ -47,7 +44,7 @@ const TOUR_CITIES_DATA: TourCity[] = [
     state_code: "VIC",
     city_name: "Melbourne",
     description:
-      "Melbourne gets an arena night with exceptional audio staging, brutalist textures, and moody atmospheric lighting.",
+      "Melbourne gets an arena night with exceptional audio staging.",
     date_status: "Coming Soon",
     date_label: "Premium venue experience",
   },
@@ -56,7 +53,7 @@ const TOUR_CITIES_DATA: TourCity[] = [
     state_code: "ACT",
     city_name: "Canberra",
     description:
-      "Bringing the legendary rock rhythms deep into the heart of the capital territory for an unforgettable performance.",
+      "Bringing the legendary rock rhythms deep into the heart of the capital.",
     date_status: "Coming Soon",
     date_label: "Capital arena stage",
   },
@@ -64,8 +61,7 @@ const TOUR_CITIES_DATA: TourCity[] = [
     id: "brisbane",
     state_code: "QLD",
     city_name: "Brisbane",
-    description:
-      "Intimate club night with a heavy focus on storytelling, raw unplugged moments, and direct connection.",
+    description: "Intimate club night with a heavy focus on storytelling.",
     date_status: "TBA",
     date_label: "Intimate storytelling night",
   },
@@ -73,8 +69,7 @@ const TOUR_CITIES_DATA: TourCity[] = [
     id: "adelaide",
     state_code: "SA",
     city_name: "Adelaide",
-    description:
-      "Intimate club night with a heavy focus on storytelling, raw unplugged moments, and direct connection.",
+    description: "Intimate club night with a heavy focus on storytelling.",
     date_status: "TBA",
     date_label: "Intimate venue experience",
   },
@@ -129,7 +124,6 @@ export default function RedesignedTourPage() {
     <div className="relative min-h-screen w-full bg-[#041e3a] text-white font-sans antialiased overflow-y-auto selection:bg-[#3a80f5] selection:text-white">
       <audio ref={audio_ref} src="/audio/tour-preview.mp3" loop />
 
-      {/* BACKGROUND VIDEO HERO CONTAINER */}
       <div className="absolute top-0 left-0 w-full h-screen z-0 overflow-hidden pointer-events-none">
         <video
           ref={video_ref}
@@ -142,7 +136,6 @@ export default function RedesignedTourPage() {
         <div className="absolute inset-0 bg-gradient-to-b from-[#041e3a]/60 via-[#041e3a]/85 to-[#041e3a]" />
       </div>
 
-      {/* GLOBAL AUDIO CONTROLLER BAR */}
       <header className="sticky top-0 z-50 w-full border-b border-white/5 bg-[#041e3a]/60 backdrop-blur-md">
         <div className="mx-auto max-w-7xl px-4 py-3 sm:px-6 lg:px-8 flex justify-center">
           <button
@@ -163,7 +156,6 @@ export default function RedesignedTourPage() {
         </div>
       </header>
 
-      {/* MAIN CONTENT VIEW */}
       <div className="relative z-10 w-full">
         {/* HERO SECTION: VIDEO + CITIES COMING SOON */}
         <section className="min-h-[calc(100vh-62px)] w-full flex flex-col justify-center">
@@ -196,8 +188,17 @@ export default function RedesignedTourPage() {
               </div>
             </div>
 
-            {/* Right Column: Heading Typography */}
             <div className="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left space-y-6 order-1 lg:order-2">
+              <div className="relative w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden bg-white/5 border border-white/10 p-2 flex items-center justify-center group backdrop-blur-sm">
+                <Image
+                  src="/images/band-logo.jpg"
+                  alt="Mukti & Revival Band Logo"
+                  width={1000}
+                  height={1000}
+                  className="object-cover rounded-full h-25 w-25 transition-transform duration-500 group-hover:scale-110"
+                />
+              </div>
+
               <div className="space-y-2">
                 <span className="text-xs sm:text-sm font-black tracking-[0.25em] text-[#3a80f5] uppercase block">
                   Live In Concert · Australia Tour 2026
@@ -209,8 +210,7 @@ export default function RedesignedTourPage() {
               <p className="max-w-xl text-sm sm:text-base leading-relaxed text-zinc-300 font-medium">
                 They are returning with fan favourites, Kathmandu stories, and
                 surprise moments just for this community. From Sydney to Perth,
-                every city brings a historic energy. Select a city grid block
-                below to stay locked with updates.
+                every city brings a historic energy.
               </p>
               <div className="pt-2">
                 <button className="flex items-center gap-2 rounded-full bg-[#3a80f5] px-8 py-4 text-sm font-black uppercase tracking-widest text-white cursor-not-allowed opacity-80">
@@ -222,6 +222,7 @@ export default function RedesignedTourPage() {
           </main>
         </section>
 
+        {/* BIO SECTION */}
         <section className="w-full bg-[#041e3a] py-20 border-t border-white/5">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
@@ -234,7 +235,7 @@ export default function RedesignedTourPage() {
                     src="/images/tour-poster.webp"
                     alt="Mukti and Revival Australia Tour Poster"
                     className="w-full h-full object-cover"
-                    priority // [!code ++]
+                    priority
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#041e3a] via-transparent to-transparent opacity-60" />
                 </div>
@@ -250,20 +251,16 @@ export default function RedesignedTourPage() {
                     Mukti & Revival
                   </h2>
                 </div>
-                <p className="text-zinc-300 text-base leading-relaxed font-normal space-y-4">
+                <p className="text-zinc-300 text-base leading-relaxed font-normal">
                   A rock band based in Kathmandu, Nepal. The band has been
                   rocking the nation since last three decades. Mukti and Revival
                   blends Nepali folk tunes with American Blues giving the taste
-                  of local flavor to their music. Making songs about politics,
-                  bureaucracy, love and simple rustic lifestyle in villages of
-                  Nepal has been a trademark for the band.
+                  of local flavor to their music.
                 </p>
                 <p className="text-zinc-300 text-base leading-relaxed font-normal">
-                  The band tries to evoke variety of emotions in people from
-                  every age group through their lyrics. Their songs question,
-                  satire and raise awareness about pertinent issues in the
-                  society. Since 90s the band has been working to revive
-                  traditional charm in modern Nepali music.
+                  Since the 90s, the band has been working to revive traditional
+                  charm in modern Nepali music, questioning, satirizing, and
+                  raising awareness about pertinent issues in society.
                 </p>
               </div>
             </div>
@@ -288,13 +285,15 @@ export default function RedesignedTourPage() {
                   key={idx}
                   className="group relative rounded-xl overflow-hidden bg-[#041e3a] border border-white/5 flex flex-col transition-all duration-300 hover:border-[#3a80f5]/50">
                   <div className="aspect-[4/5] w-full overflow-hidden bg-zinc-900 relative">
-                    <img
+                    <Image
                       src={member.image}
                       alt={member.name}
-                      className="w-full h-full object-cover filter grayscale contrast-115 transition-all duration-500 group-hover:grayscale-0 group-hover:scale-105"
+                      fill
+                      sizes="(max-w-7xl) 25vw, 50vw"
+                      className="object-cover filter grayscale contrast-[1.15] transition-all duration-500 group-hover:grayscale-0 group-hover:scale-105"
                     />
                   </div>
-                  <div className="p-4 bg-gradient-to-t from-[#041e3a] to-[#041e3a]/90 border-t border-white/5">
+                  <div className="p-4 bg-gradient-to-t from-[#041e3a] to-[#041e3a]/90 border-t border-white/5 z-10">
                     <h4 className="text-lg font-bold text-white tracking-wide">
                       {member.name}
                     </h4>
@@ -308,7 +307,7 @@ export default function RedesignedTourPage() {
           </div>
         </section>
 
-        {/* SPOTIFY STREAMING PLAYER EXPERIENTIAL AREA */}
+        {/* SPOTIFY STREAMING PLAYER AREA */}
         <section className="w-full bg-[#041e3a] py-20 border-t border-white/5">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
             <div className="space-y-1">
@@ -323,13 +322,34 @@ export default function RedesignedTourPage() {
             <div className="w-full rounded-xl overflow-hidden shadow-lg mt-6">
               <iframe
                 data-testid="embed-iframe"
-                src="https://open.spotify.com/embed/artist/62yM3pzTzQHys1Ih7e9dJT?utm_source=generator"
+                src="https://open.spotify.com/embed/artist/4X9z6R503gZ1A5Sbe87hF0"
                 width="100%"
                 height="352"
-                className="border-0"
+                className="border-0 rounded-xl"
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                 loading="lazy"
               />
+            </div>
+          </div>
+        </section>
+
+        <section className="w-full bg-[#041e3a] py-12 border-t border-white/5">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+            <p className="text-center text-[10px] font-bold tracking-[0.3em] text-zinc-400 uppercase">
+              Tours By & In Associated With
+            </p>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-6 items-center justify-items-center ">
+              {[1, 2, 3].map((sponsorNum) => (
+                <div key={sponsorNum} className="">
+                  <Image
+                    src={`/images/sponsors/logo-${sponsorNum}.png`}
+                    alt={`Sponsor Logo ${sponsorNum}`}
+                    width={1000}
+                    height={1000}
+                    className="object-cover p-2 w-40 h-30 rounded-2xl"
+                  />
+                </div>
+              ))}
             </div>
           </div>
         </section>
