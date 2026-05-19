@@ -370,7 +370,7 @@ export default function RedesignedTourPage() {
             <div className="flex flex-wrap gap-4 w-full items-center justify-around">
               <div className="flex flex-col gap-6 items-center justify-items-center ">
                 <h3>Tours By</h3>
-                <div className="group relative flex items-center justify-between rounded-xl border border-white/5 bg-[#041e3a]/40 p-4 backdrop-blur-md transition-all duration-300">
+                <div className="flex">
                   {[1, 2].map((sponsorNum) => (
                     <div key={sponsorNum} className="">
                       <Image
@@ -386,36 +386,32 @@ export default function RedesignedTourPage() {
               </div>
               <div className="flex flex-col gap-6 items-center justify-items-center ">
                 <h3>In Associated With:</h3>
-                <div className="group relative flex items-center justify-between rounded-xl border border-white/5 bg-[#041e3a]/40 p-4 backdrop-blur-md transition-all duration-300">
-                  {[3].map((sponsorNum) => (
-                    <div key={sponsorNum} className="">
-                      <Image
-                        src={`/images/sponsors/logo-${sponsorNum}.png`}
-                        alt={`Sponsor Logo ${sponsorNum}`}
-                        width={1000}
-                        height={1000}
-                        className="object-cover p-2 w-40 h-30 rounded-2xl"
-                      />
-                    </div>
-                  ))}
-                </div>
+                {[3].map((sponsorNum) => (
+                  <div key={sponsorNum} className="">
+                    <Image
+                      src={`/images/sponsors/logo-${sponsorNum}.png`}
+                      alt={`Sponsor Logo ${sponsorNum}`}
+                      width={1000}
+                      height={1000}
+                      className="object-cover p-2 w-40 h-30 rounded-2xl"
+                    />
+                  </div>
+                ))}
               </div>
 
               <div className="flex flex-col gap-6 items-center justify-items-center ">
                 <h3>Marketing and creative by:</h3>
-                <div className="group relative flex items-center justify-between rounded-xl border border-white/5 bg-[#041e3a]/40 p-4 backdrop-blur-md transition-all duration-300">
-                  {[4].map((sponsorNum) => (
-                    <div key={sponsorNum} className="">
-                      <Image
-                        src={`/images/sponsors/logo-${sponsorNum}.png`}
-                        alt={`Sponsor Logo ${sponsorNum}`}
-                        width={1000}
-                        height={1000}
-                        className="object-cover p-2 w-40 h-30 rounded-2xl"
-                      />
-                    </div>
-                  ))}
-                </div>
+                {[4].map((sponsorNum) => (
+                  <div key={sponsorNum} className="">
+                    <Image
+                      src={`/images/sponsors/logo-${sponsorNum}.png`}
+                      alt={`Sponsor Logo ${sponsorNum}`}
+                      width={1000}
+                      height={1000}
+                      className="object-cover p-2 w-40 h-30 rounded-2xl"
+                    />
+                  </div>
+                ))}
               </div>
             </div>
           </div>
