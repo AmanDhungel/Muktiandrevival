@@ -326,8 +326,10 @@ export default function RedesignedTourPage() {
                 src="https://open.spotify.com/embed/artist/62yM3pzTzQHys1Ih7e9dJT?utm_source=generator"
                 width="100%"
                 height="352"
+                className="border-0"
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                loading="lazy"></iframe>
+                loading="lazy"
+              />
             </div>
           </div>
         </section>
