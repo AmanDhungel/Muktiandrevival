@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import { Volume2, VolumeX, Calendar, Disc } from "lucide-react";
+import { Volume2, VolumeX, Calendar, Disc, Phone } from "lucide-react";
 import Image from "next/image";
 
 interface TourCity {
@@ -222,6 +222,44 @@ export default function RedesignedTourPage() {
           </main>
         </section>
 
+        {/* CONTACT / SPONSORSHIP ENQUIRY CARD */}
+        <section className="w-full bg-[#041e3a] pb-16 pt-4">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6">
+            <div className="relative rounded-2xl border border-white/10 bg-white/5 p-6 sm:p-8 backdrop-blur-md shadow-xl text-center space-y-6 overflow-hidden group hover:border-[#3a80f5]/40 transition-all duration-300">
+              {/* Decorative background glow subtle effect */}
+              <div className="absolute -top-24 -right-24 h-48 w-48 bg-[#3a80f5]/10 rounded-full blur-3xl group-hover:bg-[#3a80f5]/20 transition-all duration-500 pointer-events-none" />
+
+              <div className="space-y-2">
+                <span className="text-xs font-bold tracking-[0.25em] text-[#3a80f5] uppercase block">
+                  Get In Touch
+                </span>
+                <h2 className="text-xl sm:text-2xl font-black uppercase tracking-tight text-white">
+                  For sponsorship and interstate
+                </h2>
+                <p className="text-xs sm:text-sm font-medium text-zinc-400">
+                  Please contact us at:
+                </p>
+              </div>
+
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 pt-2">
+                <a
+                  href="tel:0451199518"
+                  className="flex items-center gap-3 rounded-full border border-white/5 bg-[#041e3a]/60 px-6 py-3 text-sm font-bold tracking-wider text-white hover:text-[#3a80f5] hover:border-[#3a80f5]/30 hover:bg-[#041e3a] transition-all duration-300 w-full sm:w-auto justify-center">
+                  <Phone className="h-4 w-4 text-[#3a80f5]" />
+                  <span>0451 199 518</span>
+                </a>
+
+                <a
+                  href="tel:0469361869"
+                  className="flex items-center gap-3 rounded-full border border-white/5 bg-[#041e3a]/60 px-6 py-3 text-sm font-bold tracking-wider text-white hover:text-[#3a80f5] hover:border-[#3a80f5]/30 hover:bg-[#041e3a] transition-all duration-300 w-full sm:w-auto justify-center">
+                  <Phone className="h-4 w-4 text-[#3a80f5]" />
+                  <span>0469 361 869</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* BIO SECTION */}
         <section className="w-full bg-[#041e3a] py-20 border-t border-white/5">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -333,21 +371,57 @@ export default function RedesignedTourPage() {
 
         <section className="w-full bg-[#041e3a] py-12 border-t border-white/5">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
-            <p className="text-center text-[10px] font-bold tracking-[0.3em] text-zinc-400 uppercase">
-              Tours By & In Associated With
-            </p>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-6 items-center justify-items-center ">
-              {[1, 2, 3].map((sponsorNum) => (
-                <div key={sponsorNum} className="">
-                  <Image
-                    src={`/images/sponsors/logo-${sponsorNum}.png`}
-                    alt={`Sponsor Logo ${sponsorNum}`}
-                    width={1000}
-                    height={1000}
-                    className="object-cover p-2 w-40 h-30 rounded-2xl"
-                  />
+            <div className="flex gap-4 w-full items-center justify-around">
+              <div className="flex flex-col gap-6 items-center justify-items-center ">
+                <h3>In Associated With:</h3>
+                <div className="group relative flex items-center justify-between rounded-xl border border-white/5 bg-[#041e3a]/40 p-4 backdrop-blur-md transition-all duration-300">
+                  {[3].map((sponsorNum) => (
+                    <div key={sponsorNum} className="">
+                      <Image
+                        src={`/images/sponsors/logo-${sponsorNum}.png`}
+                        alt={`Sponsor Logo ${sponsorNum}`}
+                        width={1000}
+                        height={1000}
+                        className="object-cover p-2 w-40 h-30 rounded-2xl"
+                      />
+                    </div>
+                  ))}
                 </div>
-              ))}
+              </div>
+
+              <div className="flex flex-col gap-6 items-center justify-items-center ">
+                <h3>Tours By</h3>
+                <div className="group relative flex items-center justify-between rounded-xl border border-white/5 bg-[#041e3a]/40 p-4 backdrop-blur-md transition-all duration-300">
+                  {[1, 2].map((sponsorNum) => (
+                    <div key={sponsorNum} className="">
+                      <Image
+                        src={`/images/sponsors/logo-${sponsorNum}.png`}
+                        alt={`Sponsor Logo ${sponsorNum}`}
+                        width={1000}
+                        height={1000}
+                        className="object-cover p-2 w-40 h-30 rounded-2xl"
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="flex flex-col gap-6 items-center justify-items-center ">
+                <h3>Marketing and creative by:</h3>
+                <div className="group relative flex items-center justify-between rounded-xl border border-white/5 bg-[#041e3a]/40 p-4 backdrop-blur-md transition-all duration-300">
+                  {[4].map((sponsorNum) => (
+                    <div key={sponsorNum} className="">
+                      <Image
+                        src={`/images/sponsors/logo-${sponsorNum}.png`}
+                        alt={`Sponsor Logo ${sponsorNum}`}
+                        width={1000}
+                        height={1000}
+                        className="object-cover p-2 w-40 h-30 rounded-2xl"
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </section>
