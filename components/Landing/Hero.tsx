@@ -157,10 +157,8 @@ export default function RedesignedTourPage() {
       </header>
 
       <div className="relative z-10 w-full">
-        {/* HERO SECTION: VIDEO + CITIES COMING SOON */}
         <section className="min-h-[calc(100vh-62px)] w-full flex flex-col justify-center">
           <main className="w-full mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center py-12">
-            {/* Left Column: Cities List with Coming Soon Badge */}
             <div className="lg:col-span-5 space-y-3 w-full order-2 lg:order-1">
               <span className="text-xs font-bold tracking-[0.2em] text-[#3a80f5] uppercase block mb-2">
                 Tour Venues & Schedule
@@ -222,11 +220,9 @@ export default function RedesignedTourPage() {
           </main>
         </section>
 
-        {/* CONTACT / SPONSORSHIP ENQUIRY CARD */}
         <section className="w-full bg-[#041e3a] pb-16 pt-4">
           <div className="max-w-3xl mx-auto px-4 sm:px-6">
             <div className="relative rounded-2xl border border-white/10 bg-white/5 p-6 sm:p-8 backdrop-blur-md shadow-xl text-center space-y-6 overflow-hidden group hover:border-[#3a80f5]/40 transition-all duration-300">
-              {/* Decorative background glow subtle effect */}
               <div className="absolute -top-24 -right-24 h-48 w-48 bg-[#3a80f5]/10 rounded-full blur-3xl group-hover:bg-[#3a80f5]/20 transition-all duration-500 pointer-events-none" />
 
               <div className="space-y-2">
@@ -371,11 +367,11 @@ export default function RedesignedTourPage() {
 
         <section className="w-full bg-[#041e3a] py-12 border-t border-white/5">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
-            <div className="flex gap-4 w-full items-center justify-around">
+            <div className="flex flex-wrap gap-4 w-full items-center justify-around">
               <div className="flex flex-col gap-6 items-center justify-items-center ">
-                <h3>In Associated With:</h3>
+                <h3>Tours By</h3>
                 <div className="group relative flex items-center justify-between rounded-xl border border-white/5 bg-[#041e3a]/40 p-4 backdrop-blur-md transition-all duration-300">
-                  {[3].map((sponsorNum) => (
+                  {[1, 2].map((sponsorNum) => (
                     <div key={sponsorNum} className="">
                       <Image
                         src={`/images/sponsors/logo-${sponsorNum}.png`}
@@ -388,11 +384,10 @@ export default function RedesignedTourPage() {
                   ))}
                 </div>
               </div>
-
               <div className="flex flex-col gap-6 items-center justify-items-center ">
-                <h3>Tours By</h3>
+                <h3>In Associated With:</h3>
                 <div className="group relative flex items-center justify-between rounded-xl border border-white/5 bg-[#041e3a]/40 p-4 backdrop-blur-md transition-all duration-300">
-                  {[1, 2].map((sponsorNum) => (
+                  {[3].map((sponsorNum) => (
                     <div key={sponsorNum} className="">
                       <Image
                         src={`/images/sponsors/logo-${sponsorNum}.png`}
@@ -426,13 +421,9 @@ export default function RedesignedTourPage() {
           </div>
         </section>
 
-        {/* PLATFORM FOOTER */}
         <footer className="w-full bg-[#041e3a] px-4 py-12 border-t border-white/5 max-w-7xl mx-auto">
           <div className="flex flex-col items-center justify-center space-y-3">
             <div className="flex items-center gap-1.5 opacity-80 hover:opacity-100 transition-opacity">
-              <div className="h-4 w-4 bg-amber-500 rounded-full flex items-center justify-center text-[9px] font-black text-black">
-                t
-              </div>
               <span className="text-sm font-black tracking-tighter text-white">
                 WhatsHappeningAustralia
               </span>
